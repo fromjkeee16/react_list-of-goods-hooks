@@ -27,7 +27,9 @@ export const App: React.FC = () => {
   const [reversed, setReversed] = useState(false);
 
   const handleSort = (type: SortType) => {
-    setSortType(type);
+    if (sortType !== type) {
+      setSortType(type);
+    }
   };
 
   const handleReset = () => {
